@@ -23,16 +23,16 @@ Also don't forget to create all the necessary methods (operations) on the instan
 * [x] Complete parsing of schema.
 * [x] Complete parsing of any valid request.
 * [x] Interpretation of simple request based on selection sets.
-#[checkbox:unchecked] Add tests for interpretation of request with fragments.
-#[checkbox:unchecked] Interpretation of request with fragments.
-#[checkbox:unchecked] Add tests for interpretation of any valid request.
-#[checkbox:unchecked] Interpretation of any valid request.
-#[checkbox:unchecked] Add tests for error handling.
-#[checkbox:unchecked] Error handling.
-#[checkbox:unchecked] Add tests for type checking rules.
-#[checkbox:unchecked] Type checking of the rules.
-#[checkbox:unchecked] Add tests for introspection.
-#[checkbox:unchecked] Introspection.
+* [ ] Add tests for interpretation of request with fragments.
+* [ ] Interpretation of request with fragments.
+* [ ] Add tests for interpretation of any valid request.
+* [ ] Interpretation of any valid request.
+* [ ] Add tests for error handling.
+* [ ] Error handling.
+* [ ] Add tests for type checking rules.
+* [ ] Type checking of the rules.
+* [ ] Add tests for introspection.
+* [ ] Introspection.
 
 # Demo
 To practice with our demo follow this steps:
