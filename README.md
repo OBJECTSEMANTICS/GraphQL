@@ -20,33 +20,33 @@ If you want to add your data to the Schema, you can modify the schema method on 
 Also don't forget to create all the necessary methods (operations) on the instance side of Query to provide the answer according to the schema defined.
 
 ### Feature ideas
-[X] Complete parsing of schema.
-[X] Complete parsing of any valid request.
-[X] Interpretation of simple request based on selection sets.
-[] Add tests for interpretation of request with fragments.
-[] Interpretation of request with fragments.
-[] Add tests for interpretation of any valid request.
-[] Interpretation of any valid request.
-[] Add tests for error handling.
-[] Error handling.
-[] Add tests for type checking rules.
-[] Type checking of the rules.
-[] Add tests for introspection.
-[] Introspection.
+-[X] Complete parsing of schema.
+-[X] Complete parsing of any valid request.
+-[X] Interpretation of simple request based on selection sets.
+-[ ] Add tests for interpretation of request with fragments.
+-[ ] Interpretation of request with fragments.
+-[ ] Add tests for interpretation of any valid request.
+-[ ] Interpretation of any valid request.
+-[ ] Add tests for error handling.
+-[ ] Error handling.
+-[ ] Add tests for type checking rules.
+-[ ] Type checking of the rules.
+-[ ] Add tests for introspection.
+-[ ] Introspection.
 
 # Demo
 To practice with our demo follow this steps:
-**1.** Open a workspace and write the following line:
+1. Open a workspace and write the following line:
 
     GraphQLBetaDemoSite demoStart
-**2.** Open the browser and go to the url:
+2. Open the browser and go to the url:
 	**localhost:8888/**
-**3.** Write the following request on the text area:
+3. Write the following request on the text area:
 
     {
 		allFilms{
 			name	
 		}
 	}
-**4.** Press the button **Submit**.
-**5.** And you will have the response for this request.
+4. Press the button **Submit**.
+5. And you will have the response for this request.
