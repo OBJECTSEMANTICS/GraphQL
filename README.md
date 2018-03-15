@@ -20,9 +20,9 @@ If you want to add your data to the Schema, you can modify the schema method on 
 Also don't forget to create all the necessary methods (operations) on the instance side of Query to provide the answer according to the schema defined.
 
 ### Feature ideas
-#[checkbox:checked] Complete parsing of schema.
-#[checkbox:checked] Complete parsing of any valid request.
-#[checkbox:checked] Interpretation of simple request based on selection sets.
+* [x] Complete parsing of schema.
+* [x] Complete parsing of any valid request.
+* [x] Interpretation of simple request based on selection sets.
 #[checkbox:unchecked] Add tests for interpretation of request with fragments.
 #[checkbox:unchecked] Interpretation of request with fragments.
 #[checkbox:unchecked] Add tests for interpretation of any valid request.
