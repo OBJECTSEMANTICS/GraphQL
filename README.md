@@ -52,11 +52,11 @@ To practice with our demo follow this steps:
 	**localhost:8888/**
 3. Write the following request on the text area:
 ```
-    {
-		allFilms{
-			name	
-		}
+{
+	allFilms{
+		name	
 	}
+}
 ```
 4. Press the button **Submit**.
 5. And you will have the response for this request.
