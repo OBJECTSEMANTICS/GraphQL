@@ -3,7 +3,15 @@ A Smalltalk GraphQL Implementation
 
 ## Installation on VW
 
-This project only works on VisualWorks 7.4, to install GraphQL go to the repository .... and load our project. If everything is going well, all the test must pass, except 11 test of the classes:
+This project only works on VisualWorks 7.4, to install GraphQL please load the following parcels on order:
+1. PetitExtensions
+2. PetitParser
+3. PetitTests
+4. GraphQLBeta
+5. GraphQLExtensions
+6. GraphQLBetaDemoSite
+
+Once load all the parcels of our project. If everything is going well, all the test must pass, except the tests of the classes:
 - GQLTypeValidatorTest
 - GQLDocumentTypeValidatorTest
 
@@ -37,16 +45,18 @@ Also don't forget to create all the necessary methods (operations) on the instan
 # Demo
 To practice with our demo follow this steps:
 1. Open a workspace and write the following line:
-
+```
     GraphQLBetaDemoSite demoStart
+```
 2. Open the browser and go to the url:
 	**localhost:8888/**
 3. Write the following request on the text area:
-
+```
     {
 		allFilms{
 			name	
 		}
 	}
+```
 4. Press the button **Submit**.
 5. And you will have the response for this request.
