@@ -3,7 +3,7 @@ A Smalltalk GraphQL Implementation
 
 ## Installation on VW
 
-This project only works on VisualWorks 7.4, to install GraphQL please load the following parcels on order:
+This project works on VisualWorks 7.4, to install GraphQL please load the following parcels on order:
 1. PetitExtensions
 2. PetitParser
 3. PetitTests
@@ -14,6 +14,25 @@ This project only works on VisualWorks 7.4, to install GraphQL please load the f
 Once load all the parcels of our project. If everything is going well, all the test must pass, except the tests of the classes:
 - GQLTypeValidatorTest
 - GQLDocumentTypeValidatorTest
+
+## Installation on Pharo
+
+Excecute the next piece of code in pharo
+
+```Smalltalk
+Gofer new
+smalltalkhubUser: 'ObjectProfile' project: 'GraphQL';
+package: 'ConfigurationOfGraphQLBeta';
+load.
+(Smalltalk at: #ConfigurationOfGraphQLBeta) perform: #loadDevelopment.
+``` 
+
+Also you can explore it in the `Catalog Browser`.
+1. Open `World Menu` then `Tools >> Catalog Browser`
+2. In search input write: `Graphql`
+3. Load it 
+
+At this moment the pharo version does not have a web page to test queries. We will send a group of monkeys to do this 
 
 ## Development
 For the moment our application works well for request based on selection sets.
