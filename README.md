@@ -1,8 +1,24 @@
 # GraphQL
-A Smalltalk GraphQL Implementation
+GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data (https://graphql.org). 
+GraphQL is ported to two Smalltalk dialects, Pharo (6.1) and VisualWorks (7.4 & 8.3). 
 
-## Installation on VW
+___
+## Installation on Pharo
+Execute the following incantation in a Playground:
+```Smalltalk
+Gofer new
+smalltalkhubUser: 'ObjectProfile' project: 'GraphQL';
+package: 'ConfigurationOfGraphQLBeta';
+load.
+(Smalltalk at: #ConfigurationOfGraphQLBeta) perform: #loadDevelopment.
+``` 
+GraphQL is also available in the Pharo Catalog Browser:
+1. Open `World Menu` then `Tools >> Catalog Browser`
+2. In search input write: `Graphql`
+3. Load it 
 
+___
+## Installation on VisualWorks
 This project works on VisualWorks 7.4, to install GraphQL please load the following parcels on order:
 1. PetitExtensions
 2. PetitParser
@@ -14,25 +30,6 @@ This project works on VisualWorks 7.4, to install GraphQL please load the follow
 Once load all the parcels of our project. If everything is going well, all the test must pass, except the tests of the classes:
 - GQLTypeValidatorTest
 - GQLDocumentTypeValidatorTest
-
-## Installation on Pharo
-
-Excecute the next piece of code in pharo
-
-```Smalltalk
-Gofer new
-smalltalkhubUser: 'ObjectProfile' project: 'GraphQL';
-package: 'ConfigurationOfGraphQLBeta';
-load.
-(Smalltalk at: #ConfigurationOfGraphQLBeta) perform: #loadDevelopment.
-``` 
-
-Also you can explore it in the `Catalog Browser`.
-1. Open `World Menu` then `Tools >> Catalog Browser`
-2. In search input write: `Graphql`
-3. Load it 
-
-At this moment the pharo version does not have a web page to test queries. We will send a group of monkeys to do this 
 
 ## Development
 For the moment our application works well for request based on selection sets.
@@ -62,7 +59,7 @@ Also don't forget to create all the necessary methods (operations) on the instan
 * [ ] Introspection.
 
 # Demo
-To practice with our demo follow this steps:
+Our distribution contains a small demo, which works both on Pharo and VisualWorks. Execute the following steps:
 1. Open a workspace and write the following line:
 ```
     GraphQLBetaDemoSite demoStart
