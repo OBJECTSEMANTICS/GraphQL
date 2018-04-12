@@ -43,7 +43,10 @@ There are some classes very important on Visual Works for GraphQL:
 If you want to add your data to the Schema, you can modify the schema method on the class side of Query. Remember that the schema is defined as a text and follows the specifications of GraphQL.
 Also don't forget to create all the necessary methods (operations) on the instance side of Query to provide the answer according to the schema defined.
 
-### Feature ideas
+___
+# Feature ideas
+
+This list describes a roadmap of our effort
 * [x] Complete parsing of schema.
 * [x] Complete parsing of any valid request.
 * [x] Interpretation of simple request based on selection sets.
@@ -57,8 +60,9 @@ Also don't forget to create all the necessary methods (operations) on the instan
 * [ ] Type checking of the rules.
 * [ ] Add tests for introspection.
 * [ ] Introspection.
+___
 
-# Demo
+# Quick Demo
 Our distribution contains a small demo, which works both on Pharo and VisualWorks. Execute the following steps:
 1. Open a workspace and write the following line:
 ```
@@ -76,3 +80,49 @@ Our distribution contains a small demo, which works both on Pharo and VisualWork
 ```
 4. Press the button **Submit**.
 5. And you will have the response for this request.
+
+# Another Quick Demo
+
+1. Define the class Hero:
+```
+Object subclass: #Hero
+	instanceVariableNames: 'name planet'
+```
+2. Define a method answering a set of heroes:
+```
+Query>>heroes
+    | c |
+    c := OrderedCollection new.
+    c add: (Hero new name: 'Superman'; planet: 'Krypton').
+    c add: (Hero new name: 'Mars pathfinder'; planet: 'Mars').
+    c add: (Hero new name: 'Curiosity'; planet: 'Mars').
+    c add: (Hero new name: 'Philae'; planet: 'comet 67P/Churyumov–Gerasimenko').
+    ^ c
+```
+3. Write the following schema:
+```
+Query>>schema
+	^ 'type Query{
+            heroes: [ Hero ]
+       },
+        type Hero{
+            name : String
+            planet : String
+        }
+        '
+```
+4. Open a workspace and write the following line:
+```
+    GraphQLBetaDemoSite demoStart
+```
+5. Open the browser and go to the url:
+	**localhost:8888/**
+6. Submit the following request within the web browser:
+```
+{
+	heroes{
+		name
+               planet	
+	}
+}
+```
