@@ -6,11 +6,11 @@ ___
 ## Installation on Pharo
 Execute the following incantation in a Playground:
 ```Smalltalk
-Gofer new
-smalltalkhubUser: 'ObjectProfile' project: 'GraphQL';
-package: 'ConfigurationOfGraphQLBeta';
-load.
-(Smalltalk at: #ConfigurationOfGraphQLBeta) perform: #loadDevelopment.
+Metacello new
+    configuration: 'GraphQLBeta';
+    smalltalkhubUser: 'ObjectProfile' project: 'GraphQL';
+    version: #development; 
+    load.
 ``` 
 GraphQL is also available in the Pharo Catalog Browser:
 1. Open `World Menu` then `Tools >> Catalog Browser`
