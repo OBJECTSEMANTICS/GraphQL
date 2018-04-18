@@ -46,13 +46,13 @@ Also don't forget to create all the necessary methods (operations) on the instan
 ___
 ## Installation on VisualWorks 8.x
 You need to load the parcels in that order
-* PetitParser.pcl
-* PetitTests.pcl
-* PetitExtensions.pcl
-* GraphQLBeta.pcl
-* Sport.pcl
-* Swazoo.pcl
-* GraphQLDemoSite.pcl
+1. PetitParser.pcl
+1. PetitTests.pcl
+1. PetitExtensions.pcl
+1. GraphQLBeta.pcl
+1. Sport.pcl
+1. Swazoo.pcl
+1. GraphQLDemoSite.pcl
 
 After loading these parcels, you should be able to run (i) all the tests of GraphQL without any failure and (ii) the demos given below
 
