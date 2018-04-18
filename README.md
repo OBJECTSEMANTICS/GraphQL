@@ -18,7 +18,7 @@ GraphQL is also available in the Pharo Catalog Browser:
 3. Load it 
 
 ___
-## Installation on VisualWorks
+## Installation on VisualWorks 7.4
 This project works on VisualWorks 7.4, to install GraphQL please load the following parcels on order:
 1. PetitExtensions
 2. PetitParser
@@ -42,6 +42,19 @@ There are some classes very important on Visual Works for GraphQL:
 
 If you want to add your data to the Schema, you can modify the schema method on the class side of Query. Remember that the schema is defined as a text and follows the specifications of GraphQL.
 Also don't forget to create all the necessary methods (operations) on the instance side of Query to provide the answer according to the schema defined.
+
+___
+## Installation on VisualWorks 8.x
+You need to load the parcels in that order
+* PetitParser.pcl
+* PetitTests.pcl
+* PetitExtensions.pcl
+* GraphQLBeta.pcl
+* Sport.pcl
+* Swazoo.pcl
+* GraphQLDemoSite.pcl
+
+After loading these parcels, you should be able to run (i) all the tests of GraphQL without any failure and (ii) the demos given below
 
 ___
 # Feature ideas
