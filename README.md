@@ -50,6 +50,7 @@ You need to load the parcels in that order
 1. PetitTests.pcl
 1. PetitExtensions.pcl
 1. GraphQLBeta.pcl
+1. GraphQLBetaExtentions.pcl
 1. Sport.pcl
 1. Swazoo.pcl
 1. GraphQLDemoSite.pcl
