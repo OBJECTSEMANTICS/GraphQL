@@ -19,18 +19,25 @@ GraphQL is also available in the Pharo Catalog Browser:
 
 ___
 ## Installation on VisualWorks 7.4
-This project works on VisualWorks 7.4, to install GraphQL please load the following parcels on order:
-1. PetitExtensions
-2. PetitParser
-3. PetitTests
-4. GraphQLBeta
-5. GraphQLExtensions
-6. GraphQLBetaDemoSite
+This project works on VisualWorks 7.4, to install GraphQL please execute the next piece of code
 
+```Smalltalk
+| dir file |
+dir := Dialog requestDirectoryName: 'Choose the graphql parcels directory'.
+dir ifEmpty: [^ self].
+dir:= dir, (String with: Filename separator).
+#('PetitExtensions' 'PetitParser' 'PetitTests'
+ 'GraphQLBeta' 'GraphQLExtensions' 'GraphQLBetaDemoSite') do: [:fn | 
+ file := dir, fn, '.pcl'.
+
+ file asFilename exists ifFalse: [self error: 'Missing parcel!', file asString].
+ Parcel loadParcelFrom: file asFilename
+  ].
+```
 Once load all the parcels of our project. If everything is going well, all the test must pass, except the tests of the classes:
-- GQLTypeValidatorTest
-- GQLDocumentTypeValidatorTest
 
+* GQLTypeValidatorTest
+* GQLDocumentTypeValidatorTest
 ## Development
 For the moment our application works well for request based on selection sets.
 
