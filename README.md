@@ -110,6 +110,21 @@ Our distribution contains a small demo, which works both on Pharo and VisualWork
 Object subclass: #Hero
 	instanceVariableNames: 'name planet'
 ```
+And the following methods:
+```
+Hero>>name
+	^ name
+
+Hero>>name: aString
+	name := aString
+	
+Hero>>planet
+	^ planet
+	
+Hero>>planet: aString
+	planet := aString
+```
+
 2. Define a method answering a set of heroes:
 ```
 Query>>heroes
