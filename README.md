@@ -88,7 +88,7 @@ ___
 Our distribution contains a small demo, which works both on Pharo and VisualWorks. Execute the following steps:
 1. Open a workspace and write the following line:
 ```
-    GraphQLBetaDemoSite demoStart
+GraphQLBetaDemoSite demoStart
 ```
 2. Open the browser and go to the url:
 	**localhost:8888/**
