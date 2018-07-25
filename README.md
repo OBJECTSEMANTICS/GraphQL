@@ -160,5 +160,5 @@ GraphQLBetaDemoSite demoStart
 		name
 		planet	
 	}
-
+}
 ```
