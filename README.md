@@ -138,19 +138,18 @@ Query>>heroes
 ```
 3. Write the following schema:
 ```
-Query>>schema
+Query class>>schema
 	^ 'type Query{
-            heroes: [ Hero ]
-       },
-        type Hero{
-            name : String
-            planet : String
-        }
-        '
+		heroes: [ Hero ]
+	},
+	type Hero{
+		name : String
+		planet : String
+	}'
 ```
 4. Open a workspace and write the following line:
 ```
-    GraphQLBetaDemoSite demoStart
+GraphQLBetaDemoSite demoStart
 ```
 5. Open the browser and go to the url:
 	**localhost:8888/**
@@ -159,7 +158,7 @@ Query>>schema
 {
 	heroes{
 		name
-               planet	
+		planet	
 	}
-}
+
 ```
