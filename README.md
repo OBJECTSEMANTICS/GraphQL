@@ -162,3 +162,7 @@ GraphQLBetaDemoSite demoStart
 	}
 }
 ```
+
+___
+## Acknowledgement
+We are very grateful to Lam Research for sponsoring part of this effort. 
