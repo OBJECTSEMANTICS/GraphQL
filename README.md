@@ -43,11 +43,11 @@ For the moment our application works well for request based on selection sets.
 
 ### Internals 
 There are some classes very important on Visual Works for GraphQL:
-- Query: It's the entry point by default of the demo. Also on the class side has defined the schema used by the demo.
-- GraphQLBetaDemoSite: It's the class to start the demo, it works with the schema of the Query class, the entry point is a Query instance and returns the results on JSON.
-- GraphQL: It's the class that attends request and return the answer.
+- `Query`: It's the entry point by default of the demo. Also on the class side has defined the schema used by the demo.
+- `GraphQLBetaDemoSite`: It's the class to start the demo, it works with the schema of the Query class, the entry point is a `Query` instance and returns the JSON results.
+- `GraphQL`: It's the class that attends request and return the answer.
 
-If you want to add your data to the Schema, you can modify the schema method on the class side of Query. Remember that the schema is defined as a text and follows the specifications of GraphQL.
+If you want to add your data to the Schema, you can modify the schema method on the class side of `Query`. Remember that the schema is defined as a text and follows the specifications of GraphQL.
 Also don't forget to create all the necessary methods (operations) on the instance side of Query to provide the answer according to the schema defined.
 
 ___
