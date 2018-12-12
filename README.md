@@ -24,7 +24,7 @@ This project works on VisualWorks 7.4, to install GraphQL please execute the nex
 ```Smalltalk
 | dir file |
 dir := Dialog requestDirectoryName: 'Choose the graphql parcels directory'.
-dir ifEmpty: [^ self].
+dir isEmpty ifTrue: [^ self].
 dir:= dir, (String with: Filename separator).
 #('PetitExtensions' 'PetitParser' 'PetitTests'
  'GraphQLBeta' 'GraphQLExtensions' 'GraphQLBetaDemoSite') do: [:fn | 
@@ -52,16 +52,21 @@ Also don't forget to create all the necessary methods (operations) on the instan
 
 ___
 ## Installation on VisualWorks 8.x
-You need to load the parcels in that order
-1. PetitParser.pcl
-1. PetitTests.pcl
-1. PetitExtensions.pcl
-1. GraphQLBeta.pcl
-1. GraphQLJSON.pcl
-1. GraphQLBetaExtentions.pcl
-1. Sport.pcl
-1. Swazoo.pcl
-1. GraphQLDemoSite.pcl
+Execute the next code
+
+```Smalltalk
+| dir file |
+dir := Dialog requestDirectoryName: 'Choose the graphql parcels directory'.
+dir isEmpty ifTrue: [^ self].
+dir:= dir, (String with: Filename separator).
+#('PetitParser' 'PetitTests''PetitExtensions'
+ 'GraphQLBeta' 'GraphQLJSON' 'GraphQLBetaExtensions' 'Sport' 'Swazoo' 'GraphQLDemoSite') do: [:fn | 
+ file := dir, fn, '.pcl'.
+
+ file asFilename exists ifFalse: [self error: 'Missing parcel!', file asString].
+ Parcel loadParcelFrom: file asFilename
+  ].
+```
 
 After loading these parcels, you should be able to run (i) all the tests of GraphQL without any failure and (ii) the demos given below
 
