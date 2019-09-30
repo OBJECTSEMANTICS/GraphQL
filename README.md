@@ -7,9 +7,8 @@ ___
 Execute the following incantation in a Playground:
 ```Smalltalk
 Metacello new
-    configuration: 'GraphQLBeta';
-    smalltalkhubUser: 'ObjectProfile' project: 'GraphQL';
-    version: #development; 
+    baseline: 'GraphQL';
+    repository: 'github://OBJECTSEMANTICS/GraphQL';
     load.
 ``` 
 GraphQL is also available in the Pharo Catalog Browser:
