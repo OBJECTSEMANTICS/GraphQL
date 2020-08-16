@@ -288,6 +288,84 @@ GQLSSchemaNodeTest >> testDescription [
 	self assert: argument type class: GQLSListTypeNode
 ]
 
+{ #category : #tests }
+GQLSSchemaNodeTest >> testDirectives [
+	schema := self
+		parseSchema:
+			'type A {
+					id: InternalCount
+					isB: BooleanType
+					size: Int
+					idA: ID_A
+					values: [ Int ! ]
+					params (name: StringName, prom: FloatingPoint, key: String): [Int]
+				}'.
+
+	self assert: schema directives class equals: Array.
+	self assert: schema directives size equals: 2.
+	self
+		assert: (schema directives at: 1) class
+		equals: GQLSDirectiveNode.
+	self assert: (schema directives at: 1) name equals: 'include'.
+	self assert: (schema directives at: 1) arguments class equals: Array.
+	self assert: (schema directives at: 1) arguments size equals: 1.
+	self
+		assert: ((schema directives at: 1) arguments at: 1) class
+		equals: GQLSInputObjectFieldNode.
+	self
+		assert: ((schema directives at: 1) arguments at: 1) name
+		equals: 'if'.
+	self
+		assert: ((schema directives at: 1) arguments at: 1) type class
+		equals: GQLSNonNullTypeNode.
+	self
+		assert: ((schema directives at: 1) arguments at: 1) type isWrappedType.
+	self
+		assert: ((schema directives at: 1) arguments at: 1) type wrappedType class
+		equals: GQLSBooleanTypeNode.
+	self assert: (schema directives at: 1) locations class equals: Array.
+	self assert: (schema directives at: 1) locations size equals: 3.
+	self
+		assert: (schema directives at: 1) locations
+		equals: #('FIELD' 'FRAGMENT_SPREAD' 'INLINE_FRAGMENT').
+	self
+		assert: (schema directives at: 2) class
+		equals: GQLSDirectiveNode.
+	self assert: (schema directives at: 2) name equals: 'skip'.
+	self assert: (schema directives at: 2) arguments class equals: Array.
+	self assert: (schema directives at: 2) arguments size equals: 1.
+	self
+		assert: ((schema directives at: 2) arguments at: 1) class
+		equals: GQLSInputObjectFieldNode.
+	self
+		assert: ((schema directives at: 2) arguments at: 1) name
+		equals: 'if'.
+	self
+		assert: ((schema directives at: 2) arguments at: 1) type class
+		equals: GQLSNonNullTypeNode.
+	self
+		assert: ((schema directives at: 2) arguments at: 1) type isWrappedType.
+	self
+		assert: ((schema directives at: 2) arguments at: 1) type wrappedType class
+		equals: GQLSBooleanTypeNode.
+	self
+		assert:
+			((schema directives at: 2) arguments at: 1) type wrappedType
+				isInputType.
+	self
+		assert:
+			((schema directives at: 2) arguments at: 1) type wrappedType
+				isScalarType.
+	self
+		assert: ((schema directives at: 2) arguments at: 1) type wrappedType kind
+		equals: 'SCALAR'.
+	self assert: (schema directives at: 2) locations class equals: Array.
+	self assert: (schema directives at: 2) locations size equals: 3.
+	self
+		assert: (schema directives at: 2) locations
+		equals: #('FIELD' 'FRAGMENT_SPREAD' 'INLINE_FRAGMENT')
+]
+
 { #category : #'tests-visiting' }
 GQLSSchemaNodeTest >> testEvaluate [
 	| typeA argument |
