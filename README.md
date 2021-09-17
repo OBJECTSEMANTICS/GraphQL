@@ -57,9 +57,8 @@ Execute the next code
 | dir file |
 dir := Dialog requestDirectoryName: 'Choose the graphql parcels directory'.
 dir isEmpty ifTrue: [^ self].
-dir:= dir, (String with: Filename separator).
-#('PetitParser' 'PetitTests''PetitExtensions'
- 'GraphQLBeta' 'GraphQLJSON' 'GraphQLBetaExtensions' 'Sport' 'Swazoo' 'GraphQLDemoSite') do: [:fn | 
+dir:= dir, (Core.String with: Filename separator).
+#('PetitParser' 'PetitTests' 'PetitExtentions' 'GraphQLBeta' 'GraphQLJSON' 'GraphQLBetaExtentions' 'Sport' 'Swazoo' 'GraphQLDemoSite') do: [:fn | 
  file := dir, fn, '.pcl'.
 
  file asFilename exists ifFalse: [self error: 'Missing parcel!', file asString].
